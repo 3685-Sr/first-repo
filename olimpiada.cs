@@ -44,10 +44,10 @@ int testSamples = int.Parse(Console.ReadLine());
                 factPrizes *= n5;
             }
 
-            int combinationParticipants = allParticipants / chosenParticipants * factParticipants;
-            int combinationPrizes = allPrizes / prizes * factPrizes;
+            int combinationParticipants = allParticipants / (chosenParticipants * factParticipants);
+            int combinationPrizes = allPrizes / (prizes * factPrizes);
 
-            int allCombination = combinationParticipants + combinationPrizes;
+            int allCombination = combinationParticipants * combinationPrizes;
 
             Console.WriteLine(allCombination);
         }
